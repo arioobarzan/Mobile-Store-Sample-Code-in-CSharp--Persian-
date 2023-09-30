@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MobileStores.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MobileStoresStoreContainer">
+    <EntitySet Name="Kalas" EntityType="MobileStores.Store.Kalas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Foroshandeghans" EntityType="MobileStores.Store.Foroshandeghans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Coustomers" EntityType="MobileStores.Store.Coustomers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kharids" EntityType="MobileStores.Store.Kharids" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Foroshes" EntityType="MobileStores.Store.Foroshes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pardakhts" EntityType="MobileStores.Store.Pardakhts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Daryafts" EntityType="MobileStores.Store.Daryafts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EsterdadKalas" EntityType="MobileStores.Store.EsterdadKalas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Aghsats" EntityType="MobileStores.Store.Aghsats" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SodoorChecks" EntityType="MobileStores.Store.SodoorChecks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DaryaftChecks" EntityType="MobileStores.Store.DaryaftChecks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BardashtMots" EntityType="MobileStores.Store.BardashtMots" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParDarMots" EntityType="MobileStores.Store.ParDarMots" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SanadForoshandeghans" EntityType="MobileStores.Store.SanadForoshandeghans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SanadMoshtaris" EntityType="MobileStores.Store.SanadMoshtaris" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="MobileStores.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Takhfifs" EntityType="MobileStores.Store.Takhfifs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Nkalas" EntityType="MobileStores.Store.Nkalas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Anbars" EntityType="MobileStores.Store.Anbars" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Varizs" EntityType="MobileStores.Store.Varizs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Banks" EntityType="MobileStores.Store.Banks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Bardashts" EntityType="MobileStores.Store.Bardashts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BarForoshes" EntityType="MobileStores.Store.BarForoshes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Moshtarekins" EntityType="MobileStores.Store.Moshtarekins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Foroshes_ForoshAghsat" EntityType="MobileStores.Store.Foroshes_ForoshAghsat" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Foroshes_ForoshNaghdi" EntityType="MobileStores.Store.Foroshes_ForoshNaghdi" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="KharidKala" Association="MobileStores.Store.KharidKala">
+      <End Role="Kharid" EntitySet="Kharids" />
+      <End Role="Kala" EntitySet="Kalas" />
+    </AssociationSet>
+    <AssociationSet Name="ForoshKala" Association="MobileStores.Store.ForoshKala">
+      <End Role="Forosh" EntitySet="Foroshes" />
+      <End Role="Kala" EntitySet="Kalas" />
+    </AssociationSet>
+    <AssociationSet Name="KharidPardakht" Association="MobileStores.Store.KharidPardakht">
+      <End Role="Kharid" EntitySet="Kharids" />
+      <End Role="Pardakht" EntitySet="Pardakhts" />
+    </AssociationSet>
+    <AssociationSet Name="ForoshDaryaft" Association="MobileStores.Store.ForoshDaryaft">
+      <End Role="Forosh" EntitySet="Foroshes" />
+      <End Role="Daryaft" EntitySet="Daryafts" />
+    </AssociationSet>
+    <AssociationSet Name="ForoshandeghanPardakht" Association="MobileStores.Store.ForoshandeghanPardakht">
+      <End Role="Foroshandeghan" EntitySet="Foroshandeghans" />
+      <End Role="Pardakht" EntitySet="Pardakhts" />
+    </AssociationSet>
+    <AssociationSet Name="CoustomerDaryaft" Association="MobileStores.Store.CoustomerDaryaft">
+      <End Role="Coustomer" EntitySet="Coustomers" />
+      <End Role="Daryaft" EntitySet="Daryafts" />
+    </AssociationSet>
+    <AssociationSet Name="BankVariz" Association="MobileStores.Store.BankVariz">
+      <End Role="Bank" EntitySet="Banks" />
+      <End Role="Variz" EntitySet="Varizs" />
+    </AssociationSet>
+    <AssociationSet Name="BankBardasht" Association="MobileStores.Store.BankBardasht">
+      <End Role="Bank" EntitySet="Banks" />
+      <End Role="Bardasht" EntitySet="Bardashts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ForoshAghsat_inherits_Forosh" Association="MobileStores.Store.FK_ForoshAghsat_inherits_Forosh">
+      <End Role="Forosh" EntitySet="Foroshes" />
+      <End Role="ForoshAghsat" EntitySet="Foroshes_ForoshAghsat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ForoshNaghdi_inherits_Forosh" Association="MobileStores.Store.FK_ForoshNaghdi_inherits_Forosh">
+      <End Role="Forosh" EntitySet="Foroshes" />
+      <End Role="ForoshNaghdi" EntitySet="Foroshes_ForoshNaghdi" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Kalas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Model" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Kharid_Id" Type="int" Nullable="true" />
+    <Property Name="Forosh_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Foroshandeghans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Family" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Tel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Foroshghah" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Bedehkar" Type="bigint" Nullable="true" />
+    <Property Name="Bestankar" Type="bigint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Coustomers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Family" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Foroshghah" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Adress" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Bedehkar" Type="bigint" Nullable="true" />
+    <Property Name="Bestankar" Type="bigint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Kharids">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="Name_Foroshandeh" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Model_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="Ghimat_vahed" Type="bigint" Nullable="false" />
+    <Property Name="Ghimat_forosh" Type="bigint" Nullable="false" />
+    <Property Name="Date_kharid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Serial" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Foroshes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="Name_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Model_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="Ghimat_vahed" Type="bigint" Nullable="false" />
+    <Property Name="Date_Forosh" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pardakhts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="mablegh_naghdi" Type="bigint" Nullable="true" />
+    <Property Name="Date_Pardaght_naghdi" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Date_sodoor" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Date_check" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Shomareh_check" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Mablegh_check" Type="bigint" Nullable="true" />
+    <Property Name="Dar_vajhe" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Type_pardakht" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Kharid_Id" Type="int" Nullable="true" />
+    <Property Name="Foroshandeghan_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Daryafts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="Mablegh_naghdi" Type="bigint" Nullable="true" />
+    <Property Name="Date_Daryaft_naghdi" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Mablegh_Dafteri" Type="bigint" Nullable="true" />
+    <Property Name="Date_Dafteri" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Name_shakhs" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Date_sodoor" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Date_check" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Shomareh_check" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Mablegh_check" Type="bigint" Nullable="true" />
+    <Property Name="Saheb_Hesab" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Pas_check" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Type_daryaft" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Forosh_Id" Type="int" Nullable="true" />
+    <Property Name="Coustomer_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="EsterdadKalas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="Name_Foroshandeh" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Model_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="Ghimat_vahed" Type="bigint" Nullable="false" />
+    <Property Name="Ghimat_forosh" Type="bigint" Nullable="false" />
+    <Property Name="Date_Esterdad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Serial" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Aghsats">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Eshterak" Type="int" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="Mablegh_factor" Type="bigint" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="count_ghest" Type="int" Nullable="false" />
+    <Property Name="Darsad_Sood" Type="int" Nullable="false" />
+    <Property Name="Pishpardakht" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SodoorChecks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_check" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shomareh_check" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mablegh_check" Type="bigint" Nullable="false" />
+    <Property Name="Dar_vajhe" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="DaryaftChecks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_sodoor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date_check" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name_Moshtari" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shomareh_check" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mablegh_check" Type="bigint" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="BardashtMots">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mablagh" Type="bigint" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParDarMots">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name_shakhs" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bedehkar" Type="bigint" Nullable="false" />
+    <Property Name="Bestankar" Type="bigint" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SanadForoshandeghans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Shomareh_sanad" Type="int" Nullable="false" />
+    <Property Name="Name_Foroshandeh" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bedehkar" Type="bigint" Nullable="false" />
+    <Property Name="Bestankar" Type="bigint" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="SanadMoshtaris">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Shomareh_sanad" Type="int" Nullable="false" />
+    <Property Name="Name_Moshtari" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bedehkar" Type="bigint" Nullable="false" />
+    <Property Name="Bestankar" Type="bigint" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Takhfifs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="Mablegh_Takhfif" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nkalas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Anbars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Model_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Count_kala" Type="int" Nullable="false" />
+    <Property Name="Ghimat_vahed" Type="bigint" Nullable="false" />
+    <Property Name="Ghimat_forosh" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Varizs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PardakhtKonandeh" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mablagh" Type="bigint" Nullable="false" />
+    <Property Name="Shomareh_Fish" Type="int" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Bank_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Banks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shohbeh" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mojodi" Type="bigint" Nullable="false" />
+    <Property Name="Saheb_Hesab" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bardashts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DaryaftKonandeh" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mablagh" Type="bigint" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tozih" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Bank_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BarForoshes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Factor" Type="int" Nullable="false" />
+    <Property Name="Name_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Model_kala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="Ghimat_vahed" Type="bigint" Nullable="false" />
+    <Property Name="Date_barForosh" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Moshtarekins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Eshterak" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Family" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shomareh_check" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shomareh_Hesab" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adress_kar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Foroshes_ForoshAghsat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Eshterak" Type="int" Nullable="true" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Foroshes_ForoshNaghdi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Name_Moshtari" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="KharidKala">
+    <End Role="Kharid" Type="MobileStores.Store.Kharids" Multiplicity="0..1" />
+    <End Role="Kala" Type="MobileStores.Store.Kalas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kharid">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Kala">
+        <PropertyRef Name="Kharid_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForoshKala">
+    <End Role="Forosh" Type="MobileStores.Store.Foroshes" Multiplicity="0..1" />
+    <End Role="Kala" Type="MobileStores.Store.Kalas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Forosh">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Kala">
+        <PropertyRef Name="Forosh_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KharidPardakht">
+    <End Role="Kharid" Type="MobileStores.Store.Kharids" Multiplicity="0..1" />
+    <End Role="Pardakht" Type="MobileStores.Store.Pardakhts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kharid">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pardakht">
+        <PropertyRef Name="Kharid_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForoshDaryaft">
+    <End Role="Forosh" Type="MobileStores.Store.Foroshes" Multiplicity="0..1" />
+    <End Role="Daryaft" Type="MobileStores.Store.Daryafts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Forosh">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Daryaft">
+        <PropertyRef Name="Forosh_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ForoshandeghanPardakht">
+    <End Role="Foroshandeghan" Type="MobileStores.Store.Foroshandeghans" Multiplicity="0..1" />
+    <End Role="Pardakht" Type="MobileStores.Store.Pardakhts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Foroshandeghan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pardakht">
+        <PropertyRef Name="Foroshandeghan_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoustomerDaryaft">
+    <End Role="Coustomer" Type="MobileStores.Store.Coustomers" Multiplicity="0..1" />
+    <End Role="Daryaft" Type="MobileStores.Store.Daryafts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Coustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Daryaft">
+        <PropertyRef Name="Coustomer_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BankVariz">
+    <End Role="Bank" Type="MobileStores.Store.Banks" Multiplicity="1" />
+    <End Role="Variz" Type="MobileStores.Store.Varizs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bank">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Variz">
+        <PropertyRef Name="Bank_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BankBardasht">
+    <End Role="Bank" Type="MobileStores.Store.Banks" Multiplicity="1" />
+    <End Role="Bardasht" Type="MobileStores.Store.Bardashts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bank">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bardasht">
+        <PropertyRef Name="Bank_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ForoshAghsat_inherits_Forosh">
+    <End Role="Forosh" Type="MobileStores.Store.Foroshes" Multiplicity="1" />
+    <End Role="ForoshAghsat" Type="MobileStores.Store.Foroshes_ForoshAghsat" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Forosh">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ForoshAghsat">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ForoshNaghdi_inherits_Forosh">
+    <End Role="Forosh" Type="MobileStores.Store.Foroshes" Multiplicity="1" />
+    <End Role="ForoshNaghdi" Type="MobileStores.Store.Foroshes_ForoshNaghdi" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Forosh">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ForoshNaghdi">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
