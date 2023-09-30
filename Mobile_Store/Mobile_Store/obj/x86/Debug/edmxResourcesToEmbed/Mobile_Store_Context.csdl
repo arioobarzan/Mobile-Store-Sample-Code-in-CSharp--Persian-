@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Mobile_Store_Context" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="Mobile_Store_ContextContainer1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kalas" EntityType="Mobile_Store_Context.Kala" />
+    <EntitySet Name="Foroshandeghans" EntityType="Mobile_Store_Context.Foroshandeghan" />
+    <EntitySet Name="Coustomers" EntityType="Mobile_Store_Context.Coustomer" />
+    <EntitySet Name="Kharids" EntityType="Mobile_Store_Context.Kharid" />
+    <EntitySet Name="Foroshes" EntityType="Mobile_Store_Context.Forosh" />
+    <EntitySet Name="Pardakhts" EntityType="Mobile_Store_Context.Pardakht" />
+    <EntitySet Name="Daryafts" EntityType="Mobile_Store_Context.Daryaft" />
+    <EntitySet Name="EsterdadKalas" EntityType="Mobile_Store_Context.EsterdadKala" />
+    <EntitySet Name="Aghsats" EntityType="Mobile_Store_Context.Aghsat" />
+    <EntitySet Name="SodoorChecks" EntityType="Mobile_Store_Context.SodoorCheck" />
+    <EntitySet Name="DaryaftChecks" EntityType="Mobile_Store_Context.DaryaftCheck" />
+    <EntitySet Name="BardashtMots" EntityType="Mobile_Store_Context.BardashtMot" />
+    <EntitySet Name="ParDarMots" EntityType="Mobile_Store_Context.ParDarMot" />
+    <EntitySet Name="SanadForoshandeghans" EntityType="Mobile_Store_Context.SanadForoshandeghan" />
+    <EntitySet Name="SanadMoshtaris" EntityType="Mobile_Store_Context.SanadMoshtari" />
+    <EntitySet Name="Users" EntityType="Mobile_Store_Context.User" />
+    <EntitySet Name="Takhfifs" EntityType="Mobile_Store_Context.Takhfif" />
+    <EntitySet Name="Nkalas" EntityType="Mobile_Store_Context.Nkala" />
+    <EntitySet Name="Anbars" EntityType="Mobile_Store_Context.Anbar" />
+    <EntitySet Name="Varizs" EntityType="Mobile_Store_Context.Variz" />
+    <EntitySet Name="Banks" EntityType="Mobile_Store_Context.Bank" />
+    <EntitySet Name="Bardashts" EntityType="Mobile_Store_Context.Bardasht" />
+    <EntitySet Name="BarForoshes" EntityType="Mobile_Store_Context.BarForosh" />
+    <EntitySet Name="Moshtarekins" EntityType="Mobile_Store_Context.Moshtarekin" />
+    <AssociationSet Name="KharidKala" Association="Mobile_Store_Context.KharidKala">
+      <End Role="Kharid" EntitySet="Kharids" />
+      <End Role="Kala" EntitySet="Kalas" />
+    </AssociationSet>
+    <AssociationSet Name="ForoshKala" Association="Mobile_Store_Context.ForoshKala">
+      <End Role="Forosh" EntitySet="Foroshes" />
+      <End Role="Kala" EntitySet="Kalas" />
+    </AssociationSet>
+    <AssociationSet Name="KharidPardakht" Association="Mobile_Store_Context.KharidPardakht">
+      <End Role="Kharid" EntitySet="Kharids" />
+      <End Role="Pardakht" EntitySet="Pardakhts" />
+    </AssociationSet>
+    <AssociationSet Name="ForoshDaryaft" Association="Mobile_Store_Context.ForoshDaryaft">
+      <End Role="Forosh" EntitySet="Foroshes" />
+      <End Role="Daryaft" EntitySet="Daryafts" />
+    </AssociationSet>
+    <AssociationSet Name="ForoshandeghanPardakht" Association="Mobile_Store_Context.ForoshandeghanPardakht">
+      <End Role="Foroshandeghan" EntitySet="Foroshandeghans" />
+      <End Role="Pardakht" EntitySet="Pardakhts" />
+    </AssociationSet>
+    <AssociationSet Name="CoustomerDaryaft" Association="Mobile_Store_Context.CoustomerDaryaft">
+      <End Role="Coustomer" EntitySet="Coustomers" />
+      <End Role="Daryaft" EntitySet="Daryafts" />
+    </AssociationSet>
+    <AssociationSet Name="BankVariz" Association="Mobile_Store_Context.BankVariz">
+      <End Role="Bank" EntitySet="Banks" />
+      <End Role="Variz" EntitySet="Varizs" />
+    </AssociationSet>
+    <AssociationSet Name="BankBardasht" Association="Mobile_Store_Context.BankBardasht">
+      <End Role="Bank" EntitySet="Banks" />
+      <End Role="Bardasht" EntitySet="Bardashts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Kala">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="true" />
+    <Property Type="String" Name="Model" Nullable="true" />
+    <NavigationProperty Name="Kharid" Relationship="Mobile_Store_Context.KharidKala" FromRole="Kala" ToRole="Kharid" />
+    <NavigationProperty Name="Forosh" Relationship="Mobile_Store_Context.ForoshKala" FromRole="Kala" ToRole="Forosh" />
+  </EntityType>
+  <EntityType Name="Foroshandeghan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="true" />
+    <Property Type="String" Name="Family" Nullable="true" />
+    <Property Type="String" Name="Tel" Nullable="false" />
+    <Property Type="String" Name="Mobile" Nullable="false" />
+    <Property Type="String" Name="Foroshghah" Nullable="false" />
+    <Property Type="String" Name="Adress" Nullable="true" />
+    <Property Type="Int64" Name="Bedehkar" Nullable="true" />
+    <Property Type="Int64" Name="Bestankar" Nullable="true" />
+    <NavigationProperty Name="Pardakhts" Relationship="Mobile_Store_Context.ForoshandeghanPardakht" FromRole="Foroshandeghan" ToRole="Pardakht" />
+  </EntityType>
+  <EntityType Name="Coustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Family" Nullable="false" />
+    <Property Type="String" Name="Tel" Nullable="false" />
+    <Property Type="String" Name="Mobile" Nullable="false" />
+    <Property Type="String" Name="Foroshghah" Nullable="true" />
+    <Property Type="String" Name="Adress" />
+    <Property Type="Int64" Name="Bedehkar" Nullable="true" />
+    <Property Type="Int64" Name="Bestankar" Nullable="true" />
+    <NavigationProperty Name="Daryafts" Relationship="Mobile_Store_Context.CoustomerDaryaft" FromRole="Coustomer" ToRole="Daryaft" />
+  </EntityType>
+  <EntityType Name="Kharid">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="String" Name="Name_Foroshandeh" Nullable="false" />
+    <Property Type="String" Name="Name_kala" Nullable="false" />
+    <Property Type="String" Name="Model_kala" Nullable="false" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_vahed" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_forosh" Nullable="false" />
+    <Property Type="String" Name="Date_kharid" Nullable="false" />
+    <Property Type="String" Name="Serial" Nullable="true" />
+    <NavigationProperty Name="Kalas" Relationship="Mobile_Store_Context.KharidKala" FromRole="Kharid" ToRole="Kala" />
+    <NavigationProperty Name="Pardakhts" Relationship="Mobile_Store_Context.KharidPardakht" FromRole="Kharid" ToRole="Pardakht" />
+  </EntityType>
+  <EntityType Name="Forosh">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="String" Name="Name_kala" Nullable="false" />
+    <Property Type="String" Name="Model_kala" Nullable="false" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_vahed" Nullable="false" />
+    <Property Type="String" Name="Date_Forosh" Nullable="false" />
+    <NavigationProperty Name="Kalas" Relationship="Mobile_Store_Context.ForoshKala" FromRole="Forosh" ToRole="Kala" />
+    <NavigationProperty Name="Daryafts" Relationship="Mobile_Store_Context.ForoshDaryaft" FromRole="Forosh" ToRole="Daryaft" />
+  </EntityType>
+  <EntityType Name="Pardakht">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="Int64" Name="mablegh_naghdi" Nullable="true" />
+    <Property Type="String" Name="Date_Pardaght_naghdi" Nullable="true" />
+    <Property Type="String" Name="Date_sodoor" Nullable="true" />
+    <Property Type="String" Name="Date_check" Nullable="true" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="true" />
+    <Property Type="String" Name="Shomareh_check" Nullable="true" />
+    <Property Type="Int64" Name="Mablegh_check" Nullable="true" />
+    <Property Type="String" Name="Dar_vajhe" Nullable="true" />
+    <Property Type="String" Name="Type_pardakht" Nullable="false" />
+    <NavigationProperty Name="Kharid" Relationship="Mobile_Store_Context.KharidPardakht" FromRole="Pardakht" ToRole="Kharid" />
+    <NavigationProperty Name="Foroshandeghan" Relationship="Mobile_Store_Context.ForoshandeghanPardakht" FromRole="Pardakht" ToRole="Foroshandeghan" />
+  </EntityType>
+  <EntityType Name="Daryaft">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="Int64" Name="Mablegh_naghdi" Nullable="true" />
+    <Property Type="String" Name="Date_Daryaft_naghdi" Nullable="true" />
+    <Property Type="Int64" Name="Mablegh_Dafteri" Nullable="true" />
+    <Property Type="String" Name="Date_Dafteri" Nullable="true" />
+    <Property Type="String" Name="Name_shakhs" Nullable="true" />
+    <Property Type="String" Name="Date_sodoor" Nullable="true" />
+    <Property Type="String" Name="Date_check" Nullable="true" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="true" />
+    <Property Type="String" Name="Shomareh_check" Nullable="true" />
+    <Property Type="Int64" Name="Mablegh_check" Nullable="true" />
+    <Property Type="String" Name="Saheb_Hesab" Nullable="true" />
+    <Property Type="String" Name="Pas_check" Nullable="true" />
+    <Property Type="String" Name="Type_daryaft" Nullable="false" />
+    <NavigationProperty Name="Forosh" Relationship="Mobile_Store_Context.ForoshDaryaft" FromRole="Daryaft" ToRole="Forosh" />
+    <NavigationProperty Name="Coustomer" Relationship="Mobile_Store_Context.CoustomerDaryaft" FromRole="Daryaft" ToRole="Coustomer" />
+  </EntityType>
+  <EntityType Name="ForoshAghsat" BaseType="Mobile_Store_Context.Forosh">
+    <Property Type="Int32" Name="Eshterak" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ForoshNaghdi" BaseType="Mobile_Store_Context.Forosh">
+    <Property Type="String" Name="Name_Moshtari" Nullable="true" />
+  </EntityType>
+  <EntityType Name="EsterdadKala">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="String" Name="Name_Foroshandeh" Nullable="false" />
+    <Property Type="String" Name="Name_kala" Nullable="false" />
+    <Property Type="String" Name="Model_kala" Nullable="false" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_vahed" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_forosh" Nullable="false" />
+    <Property Type="String" Name="Date_Esterdad" Nullable="false" />
+    <Property Type="String" Name="Serial" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Aghsat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="Eshterak" Nullable="false" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="Int32" Name="Shomare_ghest" Nullable="false" />
+    <Property Type="Int64" Name="Mablegh_ghest" Nullable="false" />
+    <Property Type="String" Name="Date_pardakht" Nullable="false" />
+    <Property Type="String" Name="Pass" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SodoorCheck">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Date_check" Nullable="false" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="false" />
+    <Property Type="String" Name="Shomareh_check" Nullable="false" />
+    <Property Type="Int64" Name="Mablegh_check" Nullable="false" />
+    <Property Type="String" Name="Dar_vajhe" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="true" />
+  </EntityType>
+  <EntityType Name="DaryaftCheck">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Date_sodoor" Nullable="false" />
+    <Property Type="String" Name="Date_check" Nullable="false" />
+    <Property Type="String" Name="Name_Moshtari" Nullable="false" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="false" />
+    <Property Type="String" Name="Shomareh_check" Nullable="false" />
+    <Property Type="Int64" Name="Mablegh_check" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="true" />
+  </EntityType>
+  <EntityType Name="BardashtMot">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Date" Nullable="false" />
+    <Property Type="Int64" Name="Mablagh" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParDarMot">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Date" Nullable="false" />
+    <Property Type="String" Name="Name_shakhs" Nullable="false" />
+    <Property Type="Int64" Name="Bedehkar" Nullable="false" />
+    <Property Type="Int64" Name="Bestankar" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SanadForoshandeghan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Shomareh_sanad" Nullable="false" />
+    <Property Type="String" Name="Name_Foroshandeh" Nullable="false" />
+    <Property Type="Int64" Name="Bedehkar" Nullable="false" />
+    <Property Type="Int64" Name="Bestankar" Nullable="false" />
+    <Property Type="String" Name="Date" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="true" />
+  </EntityType>
+  <EntityType Name="SanadMoshtari">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Shomareh_sanad" Nullable="false" />
+    <Property Type="String" Name="Name_Moshtari" Nullable="false" />
+    <Property Type="Int64" Name="Bedehkar" Nullable="false" />
+    <Property Type="Int64" Name="Bestankar" Nullable="false" />
+    <Property Type="String" Name="Date" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserName" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" />
+    <Property Type="String" Name="Type" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Takhfif">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="Int64" Name="Mablegh_Takhfif" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nkala">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Anbar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name_kala" Nullable="false" />
+    <Property Type="String" Name="Model_kala" Nullable="false" />
+    <Property Type="Int32" Name="Count_kala" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_vahed" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_forosh" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Variz">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="false" />
+    <Property Type="String" Name="PardakhtKonandeh" Nullable="false" />
+    <Property Type="Int64" Name="Mablagh" Nullable="false" />
+    <Property Type="Int32" Name="Shomareh_Fish" Nullable="false" />
+    <Property Type="String" Name="Date" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="true" />
+    <NavigationProperty Name="Bank" Relationship="Mobile_Store_Context.BankVariz" FromRole="Variz" ToRole="Bank" />
+  </EntityType>
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Shohbeh" Nullable="false" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="false" />
+    <Property Type="Int64" Name="Mojodi" Nullable="false" />
+    <Property Type="String" Name="Saheb_Hesab" Nullable="false" />
+    <NavigationProperty Name="Varizs" Relationship="Mobile_Store_Context.BankVariz" FromRole="Bank" ToRole="Variz" />
+    <NavigationProperty Name="Bardashts" Relationship="Mobile_Store_Context.BankBardasht" FromRole="Bank" ToRole="Bardasht" />
+  </EntityType>
+  <EntityType Name="Bardasht">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="false" />
+    <Property Type="String" Name="DaryaftKonandeh" Nullable="false" />
+    <Property Type="Int64" Name="Mablagh" Nullable="false" />
+    <Property Type="String" Name="Date" Nullable="false" />
+    <Property Type="String" Name="Tozih" Nullable="true" />
+    <NavigationProperty Name="Bank" Relationship="Mobile_Store_Context.BankBardasht" FromRole="Bardasht" ToRole="Bank" />
+  </EntityType>
+  <EntityType Name="BarForosh">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Factor" Nullable="false" />
+    <Property Type="String" Name="Name_kala" Nullable="false" />
+    <Property Type="String" Name="Model_kala" Nullable="false" />
+    <Property Type="Int32" Name="Count" Nullable="false" />
+    <Property Type="Int64" Name="Ghimat_vahed" Nullable="false" />
+    <Property Type="String" Name="Date_barForosh" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Moshtarekin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="Eshterak" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Family" Nullable="false" />
+    <Property Type="String" Name="Tel" Nullable="false" />
+    <Property Type="String" Name="Mobile" Nullable="false" />
+    <Property Type="String" Name="Shomareh_check" Nullable="false" />
+    <Property Type="String" Name="Shomareh_Hesab" Nullable="false" />
+    <Property Type="String" Name="Adress_kar" Nullable="false" />
+    <Property Type="String" Name="Adress" Nullable="false" />
+  </EntityType>
+  <Association Name="KharidKala">
+    <End Type="Mobile_Store_Context.Kharid" Role="Kharid" Multiplicity="0..1" />
+    <End Type="Mobile_Store_Context.Kala" Role="Kala" Multiplicity="*" />
+  </Association>
+  <Association Name="ForoshKala">
+    <End Type="Mobile_Store_Context.Forosh" Role="Forosh" Multiplicity="0..1" />
+    <End Type="Mobile_Store_Context.Kala" Role="Kala" Multiplicity="*" />
+  </Association>
+  <Association Name="KharidPardakht">
+    <End Type="Mobile_Store_Context.Kharid" Role="Kharid" Multiplicity="0..1" />
+    <End Type="Mobile_Store_Context.Pardakht" Role="Pardakht" Multiplicity="*" />
+  </Association>
+  <Association Name="ForoshDaryaft">
+    <End Type="Mobile_Store_Context.Forosh" Role="Forosh" Multiplicity="0..1" />
+    <End Type="Mobile_Store_Context.Daryaft" Role="Daryaft" Multiplicity="*" />
+  </Association>
+  <Association Name="ForoshandeghanPardakht">
+    <End Type="Mobile_Store_Context.Foroshandeghan" Role="Foroshandeghan" Multiplicity="0..1" />
+    <End Type="Mobile_Store_Context.Pardakht" Role="Pardakht" Multiplicity="*" />
+  </Association>
+  <Association Name="CoustomerDaryaft">
+    <End Type="Mobile_Store_Context.Coustomer" Role="Coustomer" Multiplicity="0..1" />
+    <End Type="Mobile_Store_Context.Daryaft" Role="Daryaft" Multiplicity="*" />
+  </Association>
+  <Association Name="BankVariz">
+    <End Type="Mobile_Store_Context.Bank" Role="Bank" Multiplicity="1" />
+    <End Type="Mobile_Store_Context.Variz" Role="Variz" Multiplicity="*" />
+  </Association>
+  <Association Name="BankBardasht">
+    <End Type="Mobile_Store_Context.Bank" Role="Bank" Multiplicity="1" />
+    <End Type="Mobile_Store_Context.Bardasht" Role="Bardasht" Multiplicity="*" />
+  </Association>
+</Schema>

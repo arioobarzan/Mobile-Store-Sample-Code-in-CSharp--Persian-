@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataContextStoreContainer" CdmEntityContainer="DataContextContainer">
+    <EntitySetMapping Name="Kalas">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Kala)">
+        <MappingFragment StoreEntitySet="Kalas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Foroshandeghans">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Foroshandeghan)">
+        <MappingFragment StoreEntitySet="Foroshandeghans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Foroshghah" ColumnName="Foroshghah" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Bedehkar" ColumnName="Bedehkar" />
+          <ScalarProperty Name="Bestankar" ColumnName="Bestankar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Coustomers">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Coustomer)">
+        <MappingFragment StoreEntitySet="Coustomers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Foroshghah" ColumnName="Foroshghah" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Bedehkar" ColumnName="Bedehkar" />
+          <ScalarProperty Name="Bestankar" ColumnName="Bestankar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kharids">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Kharid)">
+        <MappingFragment StoreEntitySet="Kharids">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Name_Foroshandeh" ColumnName="Name_Foroshandeh" />
+          <ScalarProperty Name="Name_kala" ColumnName="Name_kala" />
+          <ScalarProperty Name="Model_kala" ColumnName="Model_kala" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Ghimat_vahed" ColumnName="Ghimat_vahed" />
+          <ScalarProperty Name="Ghimat_forosh" ColumnName="Ghimat_forosh" />
+          <ScalarProperty Name="Date_kharid" ColumnName="Date_kharid" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Foroshes">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Forosh)">
+        <MappingFragment StoreEntitySet="Foroshes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Name_kala" ColumnName="Name_kala" />
+          <ScalarProperty Name="Model_kala" ColumnName="Model_kala" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Ghimat_vahed" ColumnName="Ghimat_vahed" />
+          <ScalarProperty Name="Date_Forosh" ColumnName="Date_Forosh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.ForoshAghsat)">
+        <MappingFragment StoreEntitySet="Foroshes_ForoshAghsat">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Eshterak" ColumnName="Eshterak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.ForoshNaghdi)">
+        <MappingFragment StoreEntitySet="Foroshes_ForoshNaghdi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name_Moshtari" ColumnName="Name_Moshtari" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pardakhts">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Pardakht)">
+        <MappingFragment StoreEntitySet="Pardakhts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="mablegh_naghdi" ColumnName="mablegh_naghdi" />
+          <ScalarProperty Name="Date_Pardaght_naghdi" ColumnName="Date_Pardaght_naghdi" />
+          <ScalarProperty Name="Date_sodoor" ColumnName="Date_sodoor" />
+          <ScalarProperty Name="Date_check" ColumnName="Date_check" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="Shomareh_check" ColumnName="Shomareh_check" />
+          <ScalarProperty Name="Mablegh_check" ColumnName="Mablegh_check" />
+          <ScalarProperty Name="Dar_vajhe" ColumnName="Dar_vajhe" />
+          <ScalarProperty Name="Type_pardakht" ColumnName="Type_pardakht" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Daryafts">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Daryaft)">
+        <MappingFragment StoreEntitySet="Daryafts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Mablegh_naghdi" ColumnName="Mablegh_naghdi" />
+          <ScalarProperty Name="Date_Daryaft_naghdi" ColumnName="Date_Daryaft_naghdi" />
+          <ScalarProperty Name="Mablegh_Dafteri" ColumnName="Mablegh_Dafteri" />
+          <ScalarProperty Name="Date_Dafteri" ColumnName="Date_Dafteri" />
+          <ScalarProperty Name="Name_shakhs" ColumnName="Name_shakhs" />
+          <ScalarProperty Name="Date_sodoor" ColumnName="Date_sodoor" />
+          <ScalarProperty Name="Date_check" ColumnName="Date_check" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="Shomareh_check" ColumnName="Shomareh_check" />
+          <ScalarProperty Name="Mablegh_check" ColumnName="Mablegh_check" />
+          <ScalarProperty Name="Saheb_Hesab" ColumnName="Saheb_Hesab" />
+          <ScalarProperty Name="Pas_check" ColumnName="Pas_check" />
+          <ScalarProperty Name="Type_daryaft" ColumnName="Type_daryaft" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EsterdadKalas">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.EsterdadKala)">
+        <MappingFragment StoreEntitySet="EsterdadKalas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Name_Foroshandeh" ColumnName="Name_Foroshandeh" />
+          <ScalarProperty Name="Name_kala" ColumnName="Name_kala" />
+          <ScalarProperty Name="Model_kala" ColumnName="Model_kala" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Ghimat_vahed" ColumnName="Ghimat_vahed" />
+          <ScalarProperty Name="Ghimat_forosh" ColumnName="Ghimat_forosh" />
+          <ScalarProperty Name="Date_Esterdad" ColumnName="Date_Esterdad" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aghsats">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Aghsat)">
+        <MappingFragment StoreEntitySet="Aghsats">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Eshterak" ColumnName="Eshterak" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Shomare_ghest" ColumnName="Shomare_ghest" />
+          <ScalarProperty Name="Mablegh_ghest" ColumnName="Mablegh_ghest" />
+          <ScalarProperty Name="Date_pardakht" ColumnName="Date_pardakht" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SodoorChecks">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.SodoorCheck)">
+        <MappingFragment StoreEntitySet="SodoorChecks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date_check" ColumnName="Date_check" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="Shomareh_check" ColumnName="Shomareh_check" />
+          <ScalarProperty Name="Mablegh_check" ColumnName="Mablegh_check" />
+          <ScalarProperty Name="Dar_vajhe" ColumnName="Dar_vajhe" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaryaftChecks">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.DaryaftCheck)">
+        <MappingFragment StoreEntitySet="DaryaftChecks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date_sodoor" ColumnName="Date_sodoor" />
+          <ScalarProperty Name="Date_check" ColumnName="Date_check" />
+          <ScalarProperty Name="Name_Moshtari" ColumnName="Name_Moshtari" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="Shomareh_check" ColumnName="Shomareh_check" />
+          <ScalarProperty Name="Mablegh_check" ColumnName="Mablegh_check" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BardashtMots">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.BardashtMot)">
+        <MappingFragment StoreEntitySet="BardashtMots">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Mablagh" ColumnName="Mablagh" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParDarMots">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.ParDarMot)">
+        <MappingFragment StoreEntitySet="ParDarMots">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Name_shakhs" ColumnName="Name_shakhs" />
+          <ScalarProperty Name="Bedehkar" ColumnName="Bedehkar" />
+          <ScalarProperty Name="Bestankar" ColumnName="Bestankar" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanadForoshandeghans">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.SanadForoshandeghan)">
+        <MappingFragment StoreEntitySet="SanadForoshandeghans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Shomareh_sanad" ColumnName="Shomareh_sanad" />
+          <ScalarProperty Name="Name_Foroshandeh" ColumnName="Name_Foroshandeh" />
+          <ScalarProperty Name="Bedehkar" ColumnName="Bedehkar" />
+          <ScalarProperty Name="Bestankar" ColumnName="Bestankar" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanadMoshtaris">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.SanadMoshtari)">
+        <MappingFragment StoreEntitySet="SanadMoshtaris">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Shomareh_sanad" ColumnName="Shomareh_sanad" />
+          <ScalarProperty Name="Name_Moshtari" ColumnName="Name_Moshtari" />
+          <ScalarProperty Name="Bedehkar" ColumnName="Bedehkar" />
+          <ScalarProperty Name="Bestankar" ColumnName="Bestankar" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Takhfifs">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Takhfif)">
+        <MappingFragment StoreEntitySet="Takhfifs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Mablegh_Takhfif" ColumnName="Mablegh_Takhfif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nkalas">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Nkala)">
+        <MappingFragment StoreEntitySet="Nkalas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Anbars">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Anbar)">
+        <MappingFragment StoreEntitySet="Anbars">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name_kala" ColumnName="Name_kala" />
+          <ScalarProperty Name="Model_kala" ColumnName="Model_kala" />
+          <ScalarProperty Name="Count_kala" ColumnName="Count_kala" />
+          <ScalarProperty Name="Ghimat_vahed" ColumnName="Ghimat_vahed" />
+          <ScalarProperty Name="Ghimat_forosh" ColumnName="Ghimat_forosh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Varizs">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Variz)">
+        <MappingFragment StoreEntitySet="Varizs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="PardakhtKonandeh" ColumnName="PardakhtKonandeh" />
+          <ScalarProperty Name="Mablagh" ColumnName="Mablagh" />
+          <ScalarProperty Name="Shomareh_Fish" ColumnName="Shomareh_Fish" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Bank)">
+        <MappingFragment StoreEntitySet="Banks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Shohbeh" ColumnName="Shohbeh" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="Mojodi" ColumnName="Mojodi" />
+          <ScalarProperty Name="Saheb_Hesab" ColumnName="Saheb_Hesab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bardashts">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Bardasht)">
+        <MappingFragment StoreEntitySet="Bardashts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="DaryaftKonandeh" ColumnName="DaryaftKonandeh" />
+          <ScalarProperty Name="Mablagh" ColumnName="Mablagh" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Tozih" ColumnName="Tozih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BarForoshes">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.BarForosh)">
+        <MappingFragment StoreEntitySet="BarForoshes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Name_kala" ColumnName="Name_kala" />
+          <ScalarProperty Name="Model_kala" ColumnName="Model_kala" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Ghimat_vahed" ColumnName="Ghimat_vahed" />
+          <ScalarProperty Name="Date_barForosh" ColumnName="Date_barForosh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moshtarekins">
+      <EntityTypeMapping TypeName="IsTypeOf(DataContext.Moshtarekin)">
+        <MappingFragment StoreEntitySet="Moshtarekins">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Eshterak" ColumnName="Eshterak" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Shomareh_check" ColumnName="Shomareh_check" />
+          <ScalarProperty Name="Shomareh_Hesab" ColumnName="Shomareh_Hesab" />
+          <ScalarProperty Name="Adress_kar" ColumnName="Adress_kar" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="KharidKala" TypeName="DataContext.KharidKala" StoreEntitySet="Kalas">
+      <EndProperty Name="Kharid">
+        <ScalarProperty Name="Id" ColumnName="Kharid_Id" />
+      </EndProperty>
+      <EndProperty Name="Kala">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Kharid_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ForoshKala" TypeName="DataContext.ForoshKala" StoreEntitySet="Kalas">
+      <EndProperty Name="Forosh">
+        <ScalarProperty Name="Id" ColumnName="Forosh_Id" />
+      </EndProperty>
+      <EndProperty Name="Kala">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Forosh_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="KharidPardakht" TypeName="DataContext.KharidPardakht" StoreEntitySet="Pardakhts">
+      <EndProperty Name="Kharid">
+        <ScalarProperty Name="Id" ColumnName="Kharid_Id" />
+      </EndProperty>
+      <EndProperty Name="Pardakht">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Kharid_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ForoshDaryaft" TypeName="DataContext.ForoshDaryaft" StoreEntitySet="Daryafts">
+      <EndProperty Name="Forosh">
+        <ScalarProperty Name="Id" ColumnName="Forosh_Id" />
+      </EndProperty>
+      <EndProperty Name="Daryaft">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Forosh_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ForoshandeghanPardakht" TypeName="DataContext.ForoshandeghanPardakht" StoreEntitySet="Pardakhts">
+      <EndProperty Name="Foroshandeghan">
+        <ScalarProperty Name="Id" ColumnName="Foroshandeghan_Id" />
+      </EndProperty>
+      <EndProperty Name="Pardakht">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Foroshandeghan_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CoustomerDaryaft" TypeName="DataContext.CoustomerDaryaft" StoreEntitySet="Daryafts">
+      <EndProperty Name="Coustomer">
+        <ScalarProperty Name="Id" ColumnName="Coustomer_Id" />
+      </EndProperty>
+      <EndProperty Name="Daryaft">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Coustomer_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BankVariz" TypeName="DataContext.BankVariz" StoreEntitySet="Varizs">
+      <EndProperty Name="Bank">
+        <ScalarProperty Name="Id" ColumnName="Bank_Id" />
+      </EndProperty>
+      <EndProperty Name="Variz">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BankBardasht" TypeName="DataContext.BankBardasht" StoreEntitySet="Bardashts">
+      <EndProperty Name="Bank">
+        <ScalarProperty Name="Id" ColumnName="Bank_Id" />
+      </EndProperty>
+      <EndProperty Name="Bardasht">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
