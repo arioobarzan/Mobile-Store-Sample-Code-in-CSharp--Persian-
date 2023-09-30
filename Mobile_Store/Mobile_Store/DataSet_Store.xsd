@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Store" targetNamespace="http://tempuri.org/DataSet_Store.xsd" xmlns:mstns="http://tempuri.org/DataSet_Store.xsd" xmlns="http://tempuri.org/DataSet_Store.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Store" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Store" msprop:Generator_UserDSName="DataSet_Store">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Forosh" msprop:Generator_TableClassName="ForoshDataTable" msprop:Generator_TableVarName="tableForosh" msprop:Generator_TablePropName="Forosh" msprop:Generator_RowDeletingName="ForoshRowDeleting" msprop:Generator_UserTableName="Forosh" msprop:Generator_RowChangingName="ForoshRowChanging" msprop:Generator_RowEvHandlerName="ForoshRowChangeEventHandler" msprop:Generator_RowDeletedName="ForoshRowDeleted" msprop:Generator_RowEvArgName="ForoshRowChangeEvent" msprop:Generator_RowChangedName="ForoshRowChanged" msprop:Generator_RowClassName="ForoshRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ردیف" msprop:Generator_ColumnVarNameInTable="columnردیف" msprop:Generator_ColumnPropNameInRow="ردیف" msprop:Generator_ColumnPropNameInTable="ردیفColumn" msprop:Generator_UserColumnName="ردیف" type="xs:string" minOccurs="0" />
+              <xs:element name="نام_کالا" msprop:Generator_ColumnVarNameInTable="columnنام_کالا" msprop:Generator_ColumnPropNameInRow="نام_کالا" msprop:Generator_ColumnPropNameInTable="نام_کالاColumn" msprop:Generator_UserColumnName="نام_کالا" type="xs:string" minOccurs="0" />
+              <xs:element name="مدل_کالا" msprop:Generator_ColumnVarNameInTable="columnمدل_کالا" msprop:Generator_ColumnPropNameInRow="مدل_کالا" msprop:Generator_ColumnPropNameInTable="مدل_کالاColumn" msprop:Generator_UserColumnName="مدل_کالا" type="xs:string" minOccurs="0" />
+              <xs:element name="تعداد" msprop:Generator_ColumnVarNameInTable="columnتعداد" msprop:Generator_ColumnPropNameInRow="تعداد" msprop:Generator_ColumnPropNameInTable="تعدادColumn" msprop:Generator_UserColumnName="تعداد" type="xs:string" minOccurs="0" />
+              <xs:element name="قیمت_واحد" msprop:Generator_ColumnVarNameInTable="columnقیمت_واحد" msprop:Generator_ColumnPropNameInRow="قیمت_واحد" msprop:Generator_ColumnPropNameInTable="قیمت_واحدColumn" msprop:Generator_UserColumnName="قیمت_واحد" type="xs:string" minOccurs="0" />
+              <xs:element name="جمع" msprop:Generator_ColumnVarNameInTable="columnجمع" msprop:Generator_ColumnPropNameInRow="جمع" msprop:Generator_ColumnPropNameInTable="جمعColumn" msprop:Generator_UserColumnName="جمع" type="xs:string" minOccurs="0" />
+              <xs:element name="خریدار" msprop:Generator_ColumnVarNameInTable="columnخریدار" msprop:Generator_ColumnPropNameInRow="خریدار" msprop:Generator_ColumnPropNameInTable="خریدارColumn" msprop:Generator_UserColumnName="خریدار" type="xs:string" minOccurs="0" />
+              <xs:element name="تاریخ_فاکتور" msprop:Generator_ColumnVarNameInTable="columnتاریخ_فاکتور" msprop:Generator_ColumnPropNameInRow="تاریخ_فاکتور" msprop:Generator_ColumnPropNameInTable="تاریخ_فاکتورColumn" msprop:Generator_UserColumnName="تاریخ_فاکتور" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Mojodi_Anbar" msprop:Generator_TableClassName="Mojodi_AnbarDataTable" msprop:Generator_TableVarName="tableMojodi_Anbar" msprop:Generator_TablePropName="Mojodi_Anbar" msprop:Generator_RowDeletingName="Mojodi_AnbarRowDeleting" msprop:Generator_UserTableName="Mojodi_Anbar" msprop:Generator_RowChangingName="Mojodi_AnbarRowChanging" msprop:Generator_RowEvHandlerName="Mojodi_AnbarRowChangeEventHandler" msprop:Generator_RowDeletedName="Mojodi_AnbarRowDeleted" msprop:Generator_RowEvArgName="Mojodi_AnbarRowChangeEvent" msprop:Generator_RowChangedName="Mojodi_AnbarRowChanged" msprop:Generator_RowClassName="Mojodi_AnbarRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ردیف" msprop:Generator_ColumnVarNameInTable="columnردیف" msprop:Generator_ColumnPropNameInRow="ردیف" msprop:Generator_ColumnPropNameInTable="ردیفColumn" msprop:Generator_UserColumnName="ردیف" type="xs:string" minOccurs="0" />
+              <xs:element name="نام_کالا" msprop:Generator_ColumnVarNameInTable="columnنام_کالا" msprop:Generator_ColumnPropNameInRow="نام_کالا" msprop:Generator_ColumnPropNameInTable="نام_کالاColumn" msprop:Generator_UserColumnName="نام_کالا" type="xs:string" minOccurs="0" />
+              <xs:element name="مدل_کالا" msprop:Generator_ColumnVarNameInTable="columnمدل_کالا" msprop:Generator_ColumnPropNameInRow="مدل_کالا" msprop:Generator_ColumnPropNameInTable="مدل_کالاColumn" msprop:Generator_UserColumnName="مدل_کالا" type="xs:string" minOccurs="0" />
+              <xs:element name="تعداد" msprop:Generator_ColumnVarNameInTable="columnتعداد" msprop:Generator_ColumnPropNameInRow="تعداد" msprop:Generator_ColumnPropNameInTable="تعدادColumn" msprop:Generator_UserColumnName="تعداد" type="xs:string" minOccurs="0" />
+              <xs:element name="قیمت_واحد" msprop:Generator_ColumnVarNameInTable="columnقیمت_واحد" msprop:Generator_ColumnPropNameInRow="قیمت_واحد" msprop:Generator_ColumnPropNameInTable="قیمت_واحدColumn" msprop:Generator_UserColumnName="قیمت_واحد" type="xs:string" minOccurs="0" />
+              <xs:element name="قیمت_فروش" msprop:Generator_ColumnVarNameInTable="columnقیمت_فروش" msprop:Generator_ColumnPropNameInRow="قیمت_فروش" msprop:Generator_ColumnPropNameInTable="قیمت_فروشColumn" msprop:Generator_UserColumnName="قیمت_فروش" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Kharid" msprop:Generator_TableClassName="KharidDataTable" msprop:Generator_TableVarName="tableKharid" msprop:Generator_TablePropName="Kharid" msprop:Generator_RowDeletingName="KharidRowDeleting" msprop:Generator_UserTableName="Kharid" msprop:Generator_RowChangingName="KharidRowChanging" msprop:Generator_RowEvHandlerName="KharidRowChangeEventHandler" msprop:Generator_RowDeletedName="KharidRowDeleted" msprop:Generator_RowEvArgName="KharidRowChangeEvent" msprop:Generator_RowChangedName="KharidRowChanged" msprop:Generator_RowClassName="KharidRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ردیف" msprop:Generator_ColumnVarNameInTable="columnردیف" msprop:Generator_ColumnPropNameInRow="ردیف" msprop:Generator_ColumnPropNameInTable="ردیفColumn" msprop:Generator_UserColumnName="ردیف" type="xs:string" minOccurs="0" />
+              <xs:element name="فروشنده" msprop:Generator_ColumnVarNameInTable="columnفروشنده" msprop:Generator_ColumnPropNameInRow="فروشنده" msprop:Generator_ColumnPropNameInTable="فروشندهColumn" msprop:Generator_UserColumnName="فروشنده" type="xs:string" minOccurs="0" />
+              <xs:element name="نام_کالا" msprop:Generator_ColumnVarNameInTable="columnنام_کالا" msprop:Generator_ColumnPropNameInRow="نام_کالا" msprop:Generator_ColumnPropNameInTable="نام_کالاColumn" msprop:Generator_UserColumnName="نام_کالا" type="xs:string" minOccurs="0" />
+              <xs:element name="مدل_کالا" msprop:Generator_ColumnVarNameInTable="columnمدل_کالا" msprop:Generator_ColumnPropNameInRow="مدل_کالا" msprop:Generator_ColumnPropNameInTable="مدل_کالاColumn" msprop:Generator_UserColumnName="مدل_کالا" type="xs:string" minOccurs="0" />
+              <xs:element name="سریال" msprop:Generator_ColumnVarNameInTable="columnسریال" msprop:Generator_ColumnPropNameInRow="سریال" msprop:Generator_ColumnPropNameInTable="سریالColumn" msprop:Generator_UserColumnName="سریال" type="xs:string" minOccurs="0" />
+              <xs:element name="تعداد" msprop:Generator_ColumnVarNameInTable="columnتعداد" msprop:Generator_ColumnPropNameInRow="تعداد" msprop:Generator_ColumnPropNameInTable="تعدادColumn" msprop:Generator_UserColumnName="تعداد" type="xs:string" minOccurs="0" />
+              <xs:element name="قیمت_واحد" msprop:Generator_ColumnVarNameInTable="columnقیمت_واحد" msprop:Generator_ColumnPropNameInRow="قیمت_واحد" msprop:Generator_ColumnPropNameInTable="قیمت_واحدColumn" msprop:Generator_UserColumnName="قیمت_واحد" type="xs:string" minOccurs="0" />
+              <xs:element name="جمع" msprop:Generator_ColumnVarNameInTable="columnجمع" msprop:Generator_ColumnPropNameInRow="جمع" msprop:Generator_ColumnPropNameInTable="جمعColumn" msprop:Generator_UserColumnName="جمع" type="xs:string" minOccurs="0" />
+              <xs:element name="تاریخ" msprop:Generator_ColumnVarNameInTable="columnتاریخ" msprop:Generator_ColumnPropNameInRow="تاریخ" msprop:Generator_ColumnPropNameInTable="تاریخColumn" msprop:Generator_UserColumnName="تاریخ" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
